@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 
-// import ToggleMounting from "./components/ToggleMounting";
 import Uploader from "./components/Uploader";
 
 class App extends Component {
@@ -9,16 +8,14 @@ class App extends Component {
     return (
       <div className="App">
         <p>TESTING</p>
-
-        {/* <ToggleMounting> */}
           <label>Image Upload</label>
           <Uploader
             id="image"
             name="image"
-            data-images-only />
-
-        {/* </ToggleMounting> */}
-        
+            data-images-only
+            data-crop="4:3"
+            onUploadComplete={info => console.log('Upload completed:', info)}
+            />
       </div>
     );
   }
